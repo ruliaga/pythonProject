@@ -15,17 +15,17 @@ def main_menu ():
         main_menu()
     elif select == 2:
         model.export_txt(database.database)
-        print('Данные телефонного справочника добавлены в файл txt.')
+        view.show_export_txt()
         main_menu()
     elif select == 3:
         model.import_txt()
-        print('Данные телефонного справочника добавлены из файла txt.')
+        view.show_import_txt()
         main_menu()
     elif select == 4:
         model.export_csv(database.database)
-        print('Данные телефонного справочника добавлены в файл csv.')
+        view.show_export_csv()
         main_menu()
     elif select == 5:
         model.import_csv()
-        print('Данные телефонного справочника добавлены из файла csv.')
+        view.show_import_csv()
         main_menu()

@@ -22,3 +22,15 @@ def show_data ():
     data = database.database
     for i in data:
         print(f'{"  ".join(i)}')
+
+def show_export_txt():
+    print('Данные телефонного справочника добавлены в файл txt.')
+
+def show_export_csv():
+    print('Данные телефонного справочника добавлены в файл csv.')
+
+def show_import_txt():
+    print('Данные телефонного справочника добавлены из файла txt.')
+
+def show_import_csv():
+    print('Данные телефонного справочника добавлены из файла csv.')
