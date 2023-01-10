@@ -11,26 +11,31 @@ def hallo ():
 def main_menu ():
     print('_____________________________________________')
     print('Выберите одно из следующих действий:')
-    print('1 - просмотр справочника')
+    print('1 - просмотр телефонного справочника')
     print('2 - экспорт данных в txt\n3 - импорт данных из txt')
     print('4 - экспорт данных в csv\n5 - импорт данных из csv')
+    print('6 - добавить контакт в телефонный справочник\n7 - удалить контакт из телефонного справочника')
+    print('8 - завершение работы')
     select = int(input('Выбор: '))
     print('_____________________________________________')
     return select
 
 def show_data ():
+    print('№\tФамилия\t\tИмя\tНомер\t\tКомментарий')
     data = database.database
-    for i in data:
-        print(f'{"  ".join(i)}')
+    for i,p in enumerate(data, start=1):
+        print(i,*p,sep='\t')
 
-def show_export_txt():
-    print('Данные телефонного справочника добавлены в файл txt.')
+def show_message(msg):
+    print(msg)
 
-def show_export_csv():
-    print('Данные телефонного справочника добавлены в файл csv.')
+def add_contact():
+    print('Введите контакт !через пробел! в формате Фамилия/Имя/Номер телефона/Комментарий: ')
+    person = input('Контакт: ').split(' ')
+    return person
 
-def show_import_txt():
-    print('Данные телефонного справочника добавлены из файла txt.')
+def delete_contact():
+    print('Введите номер строки телефонного справочника, который желаете удалить.')
+    del_num = int(input('Номер строки для удаления: '))
+    return del_num
 
-def show_import_csv():
-    print('Данные телефонного справочника добавлены из файла csv.')

@@ -30,6 +30,14 @@ def import_csv ():
     with open('Homework7/database.csv','r', encoding='UTF-8') as d:
         reader = csv.reader(d, delimiter=',')
         database.database = list(reader)
+
+def add_contact(person):
+    database.database.append(person)
+
+def delete_contact(del_num):
+    for i, person in enumerate(database.database,start=1):
+        if i == del_num:
+            database.database.pop(i-1)
         
 
 
