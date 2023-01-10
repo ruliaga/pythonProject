@@ -22,7 +22,7 @@ def main_menu ():
         print('Данные телефонного справочника добавлены из файла txt.')
         main_menu()
     elif select == 4:
-        model.export_csv()
+        model.export_csv(database.database)
         print('Данные телефонного справочника добавлены в файл csv.')
         main_menu()
     elif select == 5:

@@ -1,3 +1,5 @@
+import csv
+import database
 
 def export_txt (database):
     data = open('Homework7/database.txt','w',encoding="UTF-8")
@@ -9,16 +11,25 @@ def export_txt (database):
 
     
 
-def export_csv ():
-    pass
+def export_csv (database):
+    with open('Homework7/database.csv','w',newline='', encoding='UTF-8') as d:
+        writer = csv.writer(d)
+        writer.writerows(database)
 
 def import_txt ():
     data = open('Homework7/database.txt','r',encoding='UTF-8')
-    ls = list(data.readlines())
-    print(ls)
+    ls = list(map(lambda x: x.replace('\n', ''), data.readlines()))
+    database_new = []
+    for i in ls:
+       a = i.split(' ')
+       database_new.append(a)
+    database.database = database_new
     data.close()
 
 def import_csv ():
-    pass
+    with open('Homework7/database.csv','r', encoding='UTF-8') as d:
+        reader = csv.reader(d, delimiter=',')
+        database.database = list(reader)
+        
 
 
