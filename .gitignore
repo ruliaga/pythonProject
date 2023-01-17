@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+Homework9/My_env
+Бот-команды/
 Practice/
 # C extensions
 *.so
