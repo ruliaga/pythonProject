@@ -1,4 +1,6 @@
 import controller
 
-controller.start()
+conf = 0
+
+# controller.start()
 

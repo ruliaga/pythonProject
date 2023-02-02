@@ -1,4 +1,0 @@
-import controller
-
-controller.start()
-

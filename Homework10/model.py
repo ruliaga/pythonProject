@@ -20,3 +20,5 @@ def computer_motion(conf):
     else:
             motion = random.randint(1,28)
     return motion
+
+
